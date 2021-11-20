@@ -1,0 +1,8 @@
+{
+    "extends": "@istanbuljs/nyc-config-typescript",
+    "extension": [ ".ts" ],
+    "all": true,
+    "check-coverage": true,
+    "exclude": [ "index.ts", "dist/**", "test/**" ],
+    "report-dir": "./coverage"
+}

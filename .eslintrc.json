@@ -1,0 +1,43 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "airbnb/base",
+        "airbnb-typescript/base"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 13,
+        "project": "./tsconfig.json",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "import",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "@typescript-eslint/indent": [ "error", 4 ],
+        "@typescript-eslint/comma-dangle": [ "off" ],
+        "one-var": [ "error", { "var": "never", "let": "always", "const": "always" } ],
+        "import/extensions": [ "error", "ignorePackages", { "js": "never", "jsx": "never", "ts": "never", "jsx": "never", "mjs": "never" } ],
+        "import/prefer-default-export": "off",
+        "max-len": [ "error", { "code": 120 } ],
+        "no-tabs": ["error", { "allowIndentationTabs": false } ],
+        "react/jsx-filename-extension": "off"
+    },
+    "settings": {
+        "import/parsers": {
+            "@typescript-eslint/parser": [ ".ts" ]
+        },
+        "import/resolver": {
+            "node": {
+                "extensions": [ ".ts" ]
+            },
+            "typescript": {
+                "directory": "./tsconfig.json"
+            }
+        }
+    }
+}
